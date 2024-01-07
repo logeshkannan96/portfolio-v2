@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Outfit', sans-serif;
+  @apply bg-gray-100;
+}
+
+.link-wrapper {
+  @apply text-zinc-700
+}
+
+.link {
+  @apply flex flex-row text-base text-zinc-700 gap-0.5 font-medium transition-all;
+}
+
+.link:hover {
+  @apply text-zinc-900 cursor-pointer gap-1 transition-all;
+}
