@@ -3,7 +3,7 @@ name: Build Deploy
 on:
   push:
     branches:
-      - '*' # deploy on all branches (but a --dry-run flag is added for branches (see code below))
+      - 'gh-pages' # deploy on all branches (but a --dry-run flag is added for branches (see code below))
 
 env:
   TARGET_DIR: dist/analog/public
