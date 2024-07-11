@@ -20,6 +20,7 @@ export default defineConfig(({ mode }) => ({
         routes: async () => [
           '/',
           '/resume',
+          '/projects',
           '/tils',
           {
             contentDir: 'src/content/tils',
