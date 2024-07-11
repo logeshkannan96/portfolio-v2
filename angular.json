@@ -3,11 +3,11 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "blog": {
+    "portfolio": {
       "projectType": "application",
       "root": ".",
       "sourceRoot": "src",
-      "prefix": "blog",
+      "prefix": "portfolio",
       "architect": {
         "build": {
           "builder": "@analogjs/platform:vite",
@@ -32,16 +32,16 @@
           "builder": "@analogjs/platform:vite-dev-server",
           "defaultConfiguration": "development",
           "options": {
-            "buildTarget": "blog:build",
+            "buildTarget": "portfolio:build",
             "port": 5173
           },
           "configurations": {
             "development": {
-              "buildTarget": "blog:build:development",
+              "buildTarget": "portfolio:build:development",
               "hmr": true
             },
             "production": {
-              "buildTarget": "blog:build:production"
+              "buildTarget": "portfolio:build:production"
             }
           }
         },
@@ -50,5 +50,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

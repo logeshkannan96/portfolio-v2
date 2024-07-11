@@ -24,6 +24,10 @@ import PostAttributes from '../../post-attributes';
     `,
   ],
 })
-export default class HomeComponent {
+export default class BlogComponent {
   readonly post$ = injectContent<PostAttributes>('slug');
+
+  constructor() {
+    console.log('BlogComponent');
+  }
 }
