@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { calculateAge } from '../../utils/utils';
+import { LinkArrowComponent } from '../link-arrow/link-arrow.component';
 
 interface HeroData {
   name: string;
@@ -7,12 +8,13 @@ interface HeroData {
   shortDescription: string;
   age: number;
   gender: string;
+  about: string;
 }
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [],
+  imports: [LinkArrowComponent],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.css'
 })
@@ -21,9 +23,10 @@ export class HeroComponent {
   heroData: HeroData = {
     name: 'Logesh',
     avatar: 'https://avatars.githubusercontent.com/u/50928757?v=4',
-    shortDescription: 'A full time learner, full stack developer!',
+    shortDescription: 'A full time learner, developer, tinkerer!',
     age: calculateAge('1996-08-09'),
     gender: 'he/him',
+    about: '<p>Full Stack Developer and DevOps enthusiast. I specialize in crafting systems that effortlessly grow, utilizing the latest tech for optimal performance. My strength lies in building strong, scalable structures that save resources. I specialize in crafting systems that effortlessly grow, utilizing  latest tech for optimal performance.</p> <p class="pt-4">My strength lies in building strong, scalable structures that save resources, scalable structures that save resources.</p>'
   }
 
 }

@@ -8,17 +8,21 @@ import PostAttributes from '../post-attributes';
   standalone: true,
   imports: [RouterLink],
   template: `
-  @for (post of posts;track post.attributes.slug) {
-    <a [routerLink]="['/tils/', post.attributes.slug]">
-      <h2>{{ post.attributes.title }}</h2>
-      <p>{{ post.attributes.description }}</p>
-    </a>
-  }
+  <h2>Today I Learned</h2>
+  <div class="py-8">
+    @for (post of posts;track post.attributes.slug) {
+      <div class="flex flex-row items-center gap-8 pt-4">
+        <p class="italic">{{ post.attributes.date }}</p>
+        <a [routerLink]="['/tils/', post.attributes.slug]">
+          <h3>{{ post.attributes.title }}</h3>
+        </a>
+      </div>
+    }
+  </div>
   `,
 })
 export default class TilComponent {
   readonly posts = injectContentFiles<PostAttributes>((contentFile) => {
-    console.log(contentFile)
     return contentFile.filename.includes('/src/content/tils')
   });
 }

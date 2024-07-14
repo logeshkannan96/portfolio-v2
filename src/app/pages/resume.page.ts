@@ -1,15 +1,16 @@
 import { Component } from '@angular/core';
-import { AboutComponent } from '../shared/components/about/about.component';
-import { ContactComponent } from '../shared/components/contact/contact.component';
-import { HeroComponent } from '../shared/components/hero/hero.component';
-import { WorkedAsComponent } from '../shared/components/worked-as/worked-as.component';
+
 @Component({
-  selector: 'app-portolio',
+  selector: 'app-resume',
   standalone: true,
-  imports: [HeroComponent, AboutComponent, WorkedAsComponent, ContactComponent],
-  templateUrl: './resume/resume.component.html',
-  styleUrl: './resume/resume.component.css'
+  imports: [],
+  template: `
+    <div class="resume">
+      <h1>Resume</h1>
+      <p>My resume will go here.</p>
+    </div>
+  `
 })
-export default class PortolioComponent {
+export default class ResumeComponent {
 
 }

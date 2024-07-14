@@ -9,9 +9,9 @@ import PostAttributes from '../post-attributes';
   imports: [AsyncPipe, MarkdownComponent],
   template: `
     @if (post$ | async; as post) {
-    <article>
-      <p>{{ post.attributes.title }}</p>
-      <img [src]="post.attributes.coverImage" />
+    <article class="max-w-4xl">
+      <h1>{{ post.attributes.title }}</h1>
+      <img [src]="post.attributes.coverImage"/>
       <analog-markdown [content]="post.content" />
     </article>
     }
