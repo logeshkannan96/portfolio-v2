@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { HeroComponent } from '../shared/components/hero/hero.component';
 import { WorkedAsComponent } from '../shared/components/worked-as/worked-as.component';
 import { ContactComponent } from '../shared/components/contact/contact.component';
+import { title } from '../signals';
 
 @Component({
   selector: 'app-home',
@@ -10,5 +11,9 @@ import { ContactComponent } from '../shared/components/contact/contact.component
   templateUrl: './home/home.component.html'
 })
 export default class HomeComponent {
+  title = title;
 
+  constructor() {
+    this.title.update(() => 'Hey, I am Loki');
+  }
 }

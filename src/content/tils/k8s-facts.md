@@ -2,7 +2,6 @@
 title: k8s Facts
 slug: k8s-facts
 date: 28 May, 2024
-coverImage: /src/assets/k8s-facts.jpg
 ---
 
 Vault let's you encrypt sensitive values in your playbook. These can be DB Passwords, API tokens etc that need to referenced inside the roles/task etc.
@@ -35,7 +34,7 @@ That's all! `{{password}}` and `{{another_password}}` will be available inside t
 
 You can use these commands to view/edit secret file.
 
-```Makefile
+```
 view-secrets:
 	ansible-vault view secrets.enc --vault-password-file=.vault_password
 

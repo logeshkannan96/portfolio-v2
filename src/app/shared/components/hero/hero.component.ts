@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { calculateAge } from '../../utils/utils';
 import { LinkArrowComponent } from '../link-arrow/link-arrow.component';
+import { RouterLink } from '@angular/router';
 
 interface HeroData {
   name: string;
@@ -14,7 +15,7 @@ interface HeroData {
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [LinkArrowComponent],
+  imports: [LinkArrowComponent, RouterLink],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.css'
 })
