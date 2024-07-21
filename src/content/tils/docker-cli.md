@@ -32,7 +32,7 @@ docker system df --verbose
 
 ## Stop all containers
 
-```
+```cs
 class GolombSequence {
     static long G(long n) {
         return n == 1 ? 1 : 1 + G(n - G(G(n - 1)));
@@ -45,7 +45,7 @@ class GolombSequence {
 }
 ```
 
-```
+```python
 import smtplib
 import time
 

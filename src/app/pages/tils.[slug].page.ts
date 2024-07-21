@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { injectContent, MarkdownComponent } from '@analogjs/content';
 import { AsyncPipe } from '@angular/common';
 import PostAttributes from '../post-attributes';
 import { title } from '../signals';
+import { DOCUMENT } from '@angular/common';
+
 
 @Component({
   selector: 'app-till-slug',
@@ -30,7 +32,7 @@ export default class TilViewComponent {
 
   title = title;
   
-  constructor() {
+  constructor(@Inject(DOCUMENT) private document: Document) {
     this.post$.subscribe((post) => {
       this.title.update(() => post.attributes.title);
     })
