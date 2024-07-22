@@ -7,13 +7,13 @@ import { DOCUMENT } from '@angular/common';
 
 
 @Component({
-  selector: 'app-till-slug',
+  selector: 'app-learnings-slug',
   standalone: true,
   imports: [AsyncPipe, MarkdownComponent],
   template: `
     @if (post$ | async; as post) {
     <article class="max-w-4xl">
-      <h1>{{ post.attributes.title }}</h1>
+      <h3>{{ post.attributes.title }}</h3>
       <p id="date">Last Updated: {{ post.attributes.date }}</p>
       <hr>
       @if(post.attributes.coverImage) {
@@ -24,10 +24,10 @@ import { DOCUMENT } from '@angular/common';
     }
   `,
 })
-export default class TilViewComponent {
+export default class LearningsViewComponent {
   readonly post$ = injectContent<PostAttributes>({
     param: 'slug',
-    subdirectory: 'tils',
+    subdirectory: 'learnings',
   });
 
   title = title;

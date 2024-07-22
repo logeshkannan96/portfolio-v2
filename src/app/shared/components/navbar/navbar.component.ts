@@ -12,7 +12,7 @@ export class NavbarComponent {
   navItems = [
     { name: 'Home', link: '' },
     // { name: 'Projects', link: 'projects' },
-    { name: '✨ TIL', link: 'tils' },
+    { name: '✨ Learnings', link: 'learnings' },
     { name: 'Resume', link: 'resume', external: true },
   ];
 }

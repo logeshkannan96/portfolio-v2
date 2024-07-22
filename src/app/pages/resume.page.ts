@@ -6,8 +6,8 @@ import { Component } from '@angular/core';
   imports: [],
   template: `
     <div class="resume">
-      <h1>Resume</h1>
-      <p>My resume will go here.</p>
+      <p class="text-base font-medium">Resume</p>
+      <p class="py-2 text-zinc-500">My resume will go here.</p>
     </div>
   `
 })

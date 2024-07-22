@@ -68,11 +68,15 @@ p {
 }
 
 .user-status {
-  @apply bg-gray-100 drop-shadow-lg bottom-6 left-4 w-10 h-10 border border-zinc-300;
+  @apply bg-gray-100 drop-shadow-lg bottom-10 left-4 w-10 h-10 border border-zinc-300;
 }
 
 .resume-section {
   @apply text-base;
+}
+
+a.page-link:visited {
+  color: purple;
 }
 
 article {
@@ -93,7 +97,7 @@ article {
     @apply my-4 text-zinc-800 font-normal;
 
     h2 {
-      @apply text-xl my-4 text-zinc-800 font-medium;
+      @apply text-lg my-4 text-zinc-800 font-medium;
       position: relative;
       /* &:before {
         content      : '';
@@ -121,7 +125,7 @@ article {
     }
     
     h2:hover:before {
-      content: '🚀';
+      content: '';
       opacity: 1;
     }
 

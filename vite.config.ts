@@ -43,9 +43,9 @@ export default defineConfig(({ mode }) => ({
           '/',
           '/resume',
           '/projects',
-          '/tils',
+          '/learnings',
           {
-            contentDir: 'src/content/tils',
+            contentDir: 'src/content/learnings',
             transform: (file: PrerenderContentFile) => {
               console.log(file)
               // do not include files marked as draft in frontmatter
@@ -54,7 +54,7 @@ export default defineConfig(({ mode }) => ({
               }
               // use the slug from frontmatter if defined, otherwise use the files basename
               const slug = file.attributes['slug'] || file.name;
-              return `/tils/${slug}`;
+              return `/learnings/${slug}`;
             },
           },
         ],
