@@ -1,7 +1,7 @@
 ---
 title: Docker CLI Commands
 slug: docker-cli-commands
-date: 28 May, 2024
+date: 04 August, 2024
 ---
 
 ## List container id of all containers
@@ -52,4 +52,9 @@ docker run --env-file=.env image:tag
 
 ```sh
 docker container prune
+```
+
+## Disk usage of containers
+```sh
+docker ps --size # docker ps -s
 ```
