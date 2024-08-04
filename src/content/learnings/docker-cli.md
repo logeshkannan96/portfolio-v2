@@ -1,7 +1,7 @@
 ---
 title: Docker CLI Commands
 slug: docker-cli-commands
-date: 04 August, 2024
+date: 04 Aug, 2024
 ---
 
 ## List container id of all containers
